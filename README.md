@@ -1,5 +1,6 @@
 <h1 align="center">Hi 👋, I'm Mohammad Rizwan</h1>
 <h3 align="center">A passionate Java Back-end developer</h3>
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F2131993%2Fscreenshots%2F4948736%2Fthoughtworks-gif_dribbble.gif&f=1&nofb=1&ipt=47e1263e561fefbb80fa7aa9e2e50cc90570035591604f7d2c4056923d7a101e&ipo=images">
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=rizwank123&label=Profile%20views&color=0e75b6&style=flat" alt="rizwank123" /> </p>
 
