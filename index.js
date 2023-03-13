@@ -31,10 +31,10 @@ darkmode.onclick = () => {
 
 
 
-function contshow4(){
-       window.open(href=" https://drive.google.com/uc?export=download&id=1U-Q7IM4qbw90OQSpgbbfruVExkA69Kdo"); 
-        }
-  let my_cont_4=document.querySelector(".RFAL").addEventListener("click",contshow4)
+// function contshow4(){
+//        window.open(href=" https://drive.google.com/uc?export=download&id=1U-Q7IM4qbw90OQSpgbbfruVExkA69Kdo"); 
+//         }
+//   let my_cont_4=document.querySelector(".RFAL").addEventListener("click",contshow4)
 
 
 
@@ -43,5 +43,14 @@ function contshow4(){
 
 
 
-  
+//   https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/49912/kalQyR5PqKSwrRnJAlhqzpxVioQh9oMuHmopQ4kJ.mp4
+// document.querySelector('#resume-link-1').addEventListener("click", () => {
+//     // console.log("OPENinig.....")
+//     window.location.assign("https://drive.google.com/file/d/1ufbe_LN-Mf_CP8wkUyHzxc0yrBRWg8XG/view?usp=share_link", "_blank");
+// })
+
+document.querySelector('#resume-link-2').addEventListener("click", () => {
+    // console.log("OPENinig.....")
+    window.location.assign("https://drive.google.com/file/d/1U-Q7IM4qbw90OQSpgbbfruVExkA69Kdo/view?usp=share_link", "_blank");
+})
 
