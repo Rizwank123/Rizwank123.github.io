@@ -1,4 +1,8 @@
-            
+  
+  
+
+
+
 // Sticky Navbar
 let header = document.querySelector('header');
 let menu = document.querySelector('#menu-icon');
@@ -54,3 +58,9 @@ document.querySelector('#resume-link-2').addEventListener("click", () => {
     window.location.assign("https://drive.google.com/file/d/1U-Q7IM4qbw90OQSpgbbfruVExkA69Kdo/view?usp=share_link", "_blank");
 })
 
+var typed = new Typed(".typing", {
+    strings: ["A Full Stack Developer", "A Car Enthusiast", "A Traveller", "A JAVA Backend Developer"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true,
+})

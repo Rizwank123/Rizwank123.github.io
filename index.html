@@ -32,8 +32,8 @@
                 <li><a href="#tech">TechStack</a></li>
                 <li><a href="#projects" class="nav-link projects">Projects</a></li>
                 <li><a href="#contact" class="nav-link contact">Contact</a></li>
-                <li id=" resume-link-1">
-                    <a class="nav-link resume" id="resume-button-1" href='/documents/Mohammad_Rizwan_Resume.pdf'
+                <li id="resume-button-1">
+                    <a class="nav-link resume" id="resume-link-1" href='/documents/Mohammad_Rizwan_Resume.pdf'
                         download="Mohammad_Rizwan_Resume">RESUME</a>
                 </li>
                 <!-- <li><a class="RFAL nav-link resume"
@@ -46,26 +46,40 @@
     <!-- navbar ends here -->
 
     <!-- Home -->
-    <section class="home nav-link" id="home">
-        <div class="social">
-            <a href="https://github.com/Rizwank123" target="_blank"><i class='bx bxl-github'
-                    id="contact-github"></i></a>
-            <a href="https://www.linkedin.com/in/mohammad-rizwan2/" target="_blank" id="contact-linkedin"><i
-                    class='bx bxl-linkedin'></i></a>
-
-        </div>
+    <!-- <section class="home nav-link" id="home">
+        
         <div class="home-img">
             <img class="home-img" src="./documents/profilepic.jpg" alt="">
         </div>
         <div class=".home-text" id="user-detail-intro">
-            <span>Hello, I'm</span>
-            <h1 id="user-detail-name">Mohammad Rizwan</h1>
-            <h2><b>Full Stack Java Backend Developer</b></h2>
-            <p id="#user-detail-intro">I am passionate about creating efficient and scalable solutions <br> that power
-                the backbone of modern web applications as a backend developer.</p>
-            <a href="#contact" class="btn">Contact Me</a>
+            <div class="social">
+                <a href="https://github.com/Rizwank123" target="_blank"><i class='bx bxl-github'
+                        id="contact-github"></i></a>
+                <a href="https://www.linkedin.com/in/mohammad-rizwan2/" target="_blank" id="contact-linkedin"><i
+                        class='bx bxl-linkedin'></i></a>
+            </div>
+            <div>
+
+                <span>Hello, I'm <h1 id="user-detail-name">Mohammad Rizwan</h1></span>
+                
+                <h2><b>Full Stack Java Backend Developer</b></h2>
+                <p id="#user-detail-intro">I am passionate about creating efficient and scalable solutions <br> that power
+                    the backbone of modern web applications as a backend developer.</p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
         </div>
 
+    </section> -->
+    <section id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div id="one">
+                    <div class="text-1">Hi, I am <span id="user-detail-name" class="text-2">Mohammad Rizwan</span></div>
+                    <div class="text-3"><span class="typing"></span></div>
+                    <a href="#contact" class="btn">Contact Me</a>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- home section ends here  -->
 
@@ -79,8 +93,7 @@
 
         <div class="about-container">
             <div class="about-img">
-                <img src="https://www.ampron.eu/wp-content/uploads/2019/01/code-developer.gif"
-                    style="margin-top:-30px; height: 350px;" alt="">
+                <img src="/documents/profilepic.jpg" style="margin-top:-30px; height: 350px;" alt="">
             </div>
             <div class="about-text">
                 <h3>I am a results-driven Java Developer with expertise in building scalable and high-performance
@@ -381,7 +394,7 @@
 
 <script src="index.js"></script>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 <!-- // github script is here  -->
 <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
     style="margin-left: 100px;"> </script>
@@ -395,4 +408,12 @@
         }
     })
 
+</script>
+<script>
+    var typed = new Typed(".typing", {
+        strings: ["A Full Stack Developer", "A Cyber Security Enthusiast", "A Pentester ", "A JAVA Backend Developer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true,
+    })
 </script>
