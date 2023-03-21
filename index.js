@@ -48,12 +48,12 @@ darkmode.onclick = () => {
 
 
   
-document.querySelector('#resume-button-1').addEventListener("click", () => {
+document.querySelector('#resume-link-1').addEventListener("click", () => {
     //console.log("OPENinig.....")
     window.location.assign("https://drive.google.com/file/d/1U-Q7IM4qbw90OQSpgbbfruVExkA69Kdo/view?usp=share_link", "_blank");
 })
 
-document.querySelector('#resume-button-2').addEventListener("click", () => {
+document.querySelector('#resume-link-2').addEventListener("click", () => {
      //console.log("OPENinig.....")
     window.location.assign("https://drive.google.com/file/d/1U-Q7IM4qbw90OQSpgbbfruVExkA69Kdo/view?usp=share_link", "_blank");
 })
