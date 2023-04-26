@@ -280,6 +280,8 @@
               width: 80%;
               border-radius: 0.5rem;
               transition: 2s;
+              margin-top:-30px;
+             height: 350px;
             }
 
             .about-img img:hover {
@@ -331,6 +333,15 @@
 
             #SkillsContainer img:hover {
               transform: scale(1.5);
+            }
+            /* .git{
+              text-align: center;
+               margin-bottom: 15px;
+                margin-top: 180px; 
+                color: rgb(86, 206, 182);
+            } */
+            .react-activity-calendar{
+              margin: auto;
             }
 
             .heading1 {
@@ -533,7 +544,7 @@
               color: #033a80;
             }
 
-/* 
+
              @media only screen and (max-width: 800px){
   #SkillsContainer{
     display: grid;
@@ -584,6 +595,15 @@
       text-align: center;
       margin-bottom: 40px;
     }
+    #home{
+      height: 50vh;
+    }
+    #home .home-content .text-2 {
+      font-size: 70px;
+      font-weight: 600;
+      color: rgb(86, 206, 182);
+      font-size: 25px;
+    }
     
     
 }
@@ -625,13 +645,13 @@
     margin-top: 30px;
   }
   
-} */
+} 
 
-/* 
+ 
   /* responsiveness start from here  */
 
             /* max width */
-             /* @media (max-width: 991px) { 
+             @media (max-width: 991px) { 
              header {
       padding: 18px 4%;
     }
@@ -649,6 +669,7 @@
     :root {
       --big-font: 2.4rem;
       --medium-font: 1.2rem;
+     
     }
     header {
       padding: 11px 4%;
@@ -691,16 +712,99 @@
     .home-text {
       grid-column: 1/3;
       padding-left: 1.4rem;
+      
+      
     }
     .home-img {
       order: initial;
+      height: 360px;
     }
+    #about{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      
+      padding: 2.5rem;
+
+    }
+    .about-container {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+  }
+  #github-stats-card{
+    width: fit-content;
+
+  }
+  .js-calendar-graph-svg{
+    width: fit-content;
+  }
+  
+
+  .about-img {
+    margin-bottom: 20px;
+    
+    text-align: center;
+  }
+
+  .about-img img {
+    height: 200px;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+  
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .info-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-box i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #resume-link-2 {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  /* about*/
+   .heading>h2{
+    display: flex;
+    padding: 2%;
+    align-items:center ;
+    justify-content: center;
+    
+  }  
+  .project-github-link{
+    margin: 2%;
+  }
+  
 } 
 
 
             /* medium and small width  */
 
-/* 
+ 
              @media (max-width: 340px) {
     :root {
       --big-font: 1.7rem;
@@ -725,6 +829,7 @@
     .contact-button{
       margin-left: 25%;
     }
+    
     #front{
       display: grid;
       grid-template-columns: repeat(1,1fr);
@@ -745,4 +850,11 @@
       text-align: center;
       margin-bottom: 40px;
     }
-  }   */ */
+    .about-container {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  }   
