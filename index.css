@@ -646,6 +646,9 @@
   }
   
 } 
+.font-normal {
+  font-family: var(--p-font);
+}
 
  
   /* responsiveness start from here  */
