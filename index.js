@@ -47,8 +47,8 @@ async function trackVisitor() {
         });
 
         // Send data to local endpoint
-        //const saveResponse = await fetch('https://visitorserver.onrender.com/visitor', {
-        const saveResponse = await fetch('http://localhost:8080/visitor', {
+        const saveResponse = await fetch('https://visitorserver.onrender.com/visitor', {
+     
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
