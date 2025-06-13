@@ -861,3 +861,52 @@
 
   }
   }   
+
+/* Visitor Count Styles */
+#visitor-count {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(86, 206, 182, 0.9);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: clamp(12px, 2vw, 14px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#visitor-count:hover {
+    transform: scale(1.05);
+    background: rgba(86, 206, 182, 1);
+}
+
+#visitor-count .emoji {
+    font-size: clamp(14px, 2.5vw, 18px);
+}
+
+/* Responsive styles for visitor count */
+@media (max-width: 768px) {
+    #visitor-count {
+        bottom: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #visitor-count {
+        bottom: 5px;
+        right: 5px;
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+}   
