@@ -11,44 +11,51 @@ async function trackVisitor() {
             referrer: document.referrer || 'direct'
         };
 
-        // Get IP and location data from the API
-        const response = await fetch('http://ip-api.com/json/');
-        const locationData = await response.json();
-        
-        // Add location data to visitor info
-        Object.assign(visitorInfo, {
-            ip: locationData.query,
-            network: locationData.isp,
-            version: locationData.as,
-            city: locationData.city,
-            region: locationData.regionName,
-            region_code: locationData.region,
-            country: locationData.countryCode,
-            country_name: locationData.country,
-            country_code: locationData.countryCode,
-            country_code_iso3: locationData.countryCode,
-            country_capital: locationData.country,
-            country_tld: `.${locationData.countryCode.toLowerCase()}`,
-            continent_code: locationData.continent,
-            in_eu: false,
-            postal: locationData.zip,
-            latitude: locationData.lat,
-            longitude: locationData.lon,
-            timezone: locationData.timezone,
-            utc_offset: locationData.timezone,
-            country_calling_code: locationData.countryCode,
-            currency: locationData.currency,
-            currency_name: locationData.currency,
-            languages: navigator.language,
-            country_area: 0,
-            country_population: 0,
-            asn: locationData.as,
-            org: locationData.isp
-        });
+        try {
+            // Get IP and location data from the API using HTTPS
+            const response = await fetch('https://ipapi.co/json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const locationData = await response.json();
+            
+            // Add location data to visitor info
+            Object.assign(visitorInfo, {
+                ip: locationData.ip,
+                network: locationData.network,
+                version: locationData.version,
+                city: locationData.city,
+                region: locationData.region,
+                region_code: locationData.region_code,
+                country: locationData.country,
+                country_name: locationData.country_name,
+                country_code: locationData.country_code,
+                country_code_iso3: locationData.country_code_iso3,
+                country_capital: locationData.country_capital,
+                country_tld: locationData.country_tld,
+                continent_code: locationData.continent_code,
+                in_eu: locationData.in_eu,
+                postal: locationData.postal,
+                latitude: locationData.latitude,
+                longitude: locationData.longitude,
+                timezone: locationData.timezone,
+                utc_offset: locationData.utc_offset,
+                country_calling_code: locationData.country_calling_code,
+                currency: locationData.currency,
+                currency_name: locationData.currency_name,
+                languages: locationData.languages,
+                country_area: locationData.country_area,
+                country_population: locationData.country_population,
+                asn: locationData.asn,
+                org: locationData.org
+            });
+        } catch (locationError) {
+            console.warn('Could not fetch location data:', locationError);
+            // Continue with basic visitor info if location fetch fails
+        }
 
-        // Send data to local endpoint
+        // Send data to visitor endpoint
         const saveResponse = await fetch('https://visitorserver.onrender.com/visitor', {
-     
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -66,6 +73,8 @@ async function trackVisitor() {
         console.log('Visitor tracked successfully');
     } catch (error) {
         console.error('Error tracking visitor:', error);
+        // Still try to update the count even if tracking fails
+        updateVisitorCount();
     }
 }
 
