@@ -55,7 +55,7 @@ async function trackVisitor() {
         }
 
         // Send data to visitor endpoint
-        const saveResponse = await fetch('https://visitorserver.onrender.com/visitor', {
+        const saveResponse = await fetch('http://18.205.196.54:80/visitor', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ async function trackVisitor() {
 // Function to fetch and display visitor count
 async function updateVisitorCount() {
     try {
-        const response = await fetch('https://visitorserver.onrender.com/visitor/count');
+        const response = await fetch('http://18.205.196.54:80/visitor/count');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
