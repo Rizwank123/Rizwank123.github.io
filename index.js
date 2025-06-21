@@ -18,7 +18,7 @@ async function trackVisitor() {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const locationData = await response.json();
-            
+
             // Add location data to visitor info
             Object.assign(visitorInfo, {
                 ip: locationData.ip,
@@ -55,7 +55,7 @@ async function trackVisitor() {
         }
 
         // Send data to visitor endpoint
-        const saveResponse = await fetch('http://18.205.196.54:80/visitor', {
+        const saveResponse = await fetch('https://visitorserver.onrender.com/visitor', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -81,13 +81,13 @@ async function trackVisitor() {
 // Function to fetch and display visitor count
 async function updateVisitorCount() {
     try {
-        const response = await fetch('http://18.205.196.54:80/visitor/count');
+        const response = await fetch('https://visitorserver.onrender.com/visitor/count');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const count = await response.text();
         console.log('Visitor count received:', count);
-        
+
         // Create or update visitor count display
         let countDisplay = document.getElementById('visitor-count');
         if (!countDisplay) {
@@ -95,16 +95,16 @@ async function updateVisitorCount() {
             countDisplay.id = 'visitor-count';
             document.body.appendChild(countDisplay);
         }
-        
+
         // Update the count display with responsive content
         countDisplay.innerHTML = `
             <span class="emoji">👥</span>
             <span>Visitors: ${count}</span>
         `;
-        
+
         // Make sure the display is visible
         countDisplay.style.display = 'flex';
-        
+
     } catch (error) {
         console.error('Error fetching visitor count:', error);
         // Create error display if count display doesn't exist
@@ -129,28 +129,28 @@ document.addEventListener('DOMContentLoaded', () => {
 let header = document.querySelector('header');
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
- 
- 
+
+
 window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 });
- 
+
 menu.onclick = () => {
     navbar.classList.toggle('active');
 }
 window.onscroll = () => {
     navbar.classList.remove('active');
 }
- 
+
 // Dark Mode
 let darkmode = document.querySelector('#darkmode');
- 
+
 darkmode.onclick = () => {
-    if(darkmode.classList.contains('bx-moon')){
-        darkmode.classList.replace('bx-moon','bx-sun');
+    if (darkmode.classList.contains('bx-moon')) {
+        darkmode.classList.replace('bx-moon', 'bx-sun');
         document.body.classList.add('active');
-    }else{
-        darkmode.classList.replace('bx-sun','bx-moon');
+    } else {
+        darkmode.classList.replace('bx-sun', 'bx-moon');
         document.body.classList.remove('active');
     }
 }
@@ -169,14 +169,14 @@ darkmode.onclick = () => {
 
 
 
-  
+
 document.querySelector('#resume-link-1').addEventListener("click", () => {
     //console.log("OPENinig.....")
     window.location.assign("https://drive.google.com/file/d/1U-Q7IM4qbw90OQSpgbbfruVExkA69Kdo/view?usp=share_link", "_blank");
 })
 
 document.querySelector('#resume-link-2').addEventListener("click", () => {
-     //console.log("OPENinig.....")
+    //console.log("OPENinig.....")
     window.location.assign("https://drive.google.com/file/d/1U-Q7IM4qbw90OQSpgbbfruVExkA69Kdo/view?usp=share_link", "_blank");
 })
 
